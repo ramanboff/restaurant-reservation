@@ -1,0 +1,20 @@
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+.searchInput {
+  padding: 10px 20px;
+  width: 50%;
+  display: flex;
+  margin: 30px auto;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  color: grey;
+}
+.searchInput::placeholder{
+  font-size: 18px;
+}
