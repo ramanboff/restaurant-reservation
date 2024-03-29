@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import cardStyle from "./Card.module.css";
 function Card({ restaurant }) {
   return (
@@ -5,7 +6,10 @@ function Card({ restaurant }) {
       <div className={cardStyle.imageContainer}>
         <img src={restaurant.photo} />
       </div>
-      <p>{restaurant.name}</p>
+      <div className={cardStyle.bottomContent}>
+        <p>{restaurant.name}</p>
+        <Link  className={cardStyle.bookingBtn}>click to reservation</Link>
+      </div>
     </div>
   );
 }
