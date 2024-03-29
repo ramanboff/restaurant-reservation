@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../../components/card/Card";
+import RestaurantsStyle from "./Restaurants.module.css"
 
 function Restaurants() {
   // states
@@ -18,11 +19,11 @@ function Restaurants() {
   return (
     <>
       <input
-        className={Restaurants.searchInput}
+        className={RestaurantsStyle.searchInput}
         type="text"
         placeholder="search restaurant"
       />
-      <div className={Restaurants.cardsWrapper}>
+      <div className={RestaurantsStyle.cardsWrapper}>
         {restaurants &&
           restaurants.map((restaurant) => (
             <Card key={restaurant.id} restaurant={restaurant} />
