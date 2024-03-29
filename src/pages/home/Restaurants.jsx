@@ -27,7 +27,7 @@ function Restaurants() {
     ? restaurants.filter((restaurant) =>
         restaurant.name.toLowerCase().includes(searchRestaurant.toLowerCase())
       )
-    : [];
+    : "";
   //search restaurant by name end
   return (
     <>
