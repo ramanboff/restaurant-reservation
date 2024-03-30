@@ -1,11 +1,45 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
 }
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+@media(max-width:1400px){
+  .container{
+   max-width: 1140px !important;
+  }
+ }
+ @media(max-width:1200px){
+ .container{
+   max-width: 960px !important;
+  }
+  }
+  @media(max-width:992px){
+   .container{
+    max-width: 720px !important;
+   }
+  }
+  @media(max-width:768px){
+   .container{
+    max-width: 540px !important;
+   }
+   .detailsContainer{
+    display: block;
+    
+   }
+  }
+  @media(max-width:576px){
+   .container{
+    max-width: 90% !important;
+   }
+  }
