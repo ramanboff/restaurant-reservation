@@ -1,7 +1,6 @@
 .card {
-  background-color: rgb(233, 121, 121);
   width: 180px;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
   transition: 0.4s all;
@@ -13,6 +12,7 @@
   transform: scale(1.2) rotate(5deg);
 }
 .bottomContent {
+  width: 100%;
   padding: 5px 0;
   display: flex;
   flex-direction: column;
@@ -25,20 +25,8 @@
   font-weight: 900;
   color: #242424;
 }
-.bookingBtn {
-  transition: all 0.2s;
-  text-decoration: none;
-  margin: 0 auto;
-  padding: 5px 10px;
-  border-radius: 10px;
-  width: fit-content;
-  background-color: #6b6969;
-  font-size: 16px;
-  color: white;
-}
-.bookingBtn:hover {
-  background-color: rgb(36, 35, 35);
-}
+
+
 
 .imageContainer {
   overflow: hidden;
@@ -50,7 +38,7 @@
 }
 
 .imageContainer img {
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
   width: 100%;
   height: 100%;
   object-fit: cover;

@@ -1,0 +1,34 @@
+.formWrapper {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+}
+.form {
+
+  background-color: #242424;
+  padding: 70px 0;
+ color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.form input {
+  /* width: 80%; */
+  height: 30px;
+}
+.guest {
+  background-color: transparent;
+  outline: none;
+ color: white;
+  height: 50px;
+}
+.datePicker{
+  width: 100%;
+  color: white;
+
+}

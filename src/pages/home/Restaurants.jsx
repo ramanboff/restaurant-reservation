@@ -1,21 +1,28 @@
-import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useRestaurants } from "../../store";
 import Card from "../../components/card/Card";
+import React, { useEffect, useState } from "react";
 import RestaurantsStyle from "./Restaurants.module.css";
 
 function Restaurants() {
   // states
-  const [restaurants, setRestaurants] = useState(null);
   const [searchRestaurant, setSearchRestaurant] = useState("");
+  const restaurants = useRestaurants((state) => state.allRestaurants);
+  const setRestaurants = useRestaurants((state) => state.updateRestaurants);
+  const url = import.meta.env.VITE_API_URL;
+
   //data fetching
+  const getData = async () => {
+    try {
+      const { data } = await axios(url);
+      setRestaurants(data);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
   useEffect(() => {
-    fetch("http://localhost:8000/restaurants")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setRestaurants(data);
-      });
+    getData();
   }, []);
 
   //search restaurant by name start
@@ -23,15 +30,15 @@ function Restaurants() {
     setSearchRestaurant(e.target.value.trim());
   };
 
-  const filteredRestaurants = restaurants
-    ? restaurants.filter((restaurant) =>
-        restaurant.name.toLowerCase().includes(searchRestaurant.toLowerCase())
-      )
-    : "";
+  const filteredRestaurants =
+    restaurants &&
+    restaurants.filter((restaurant) =>
+      restaurant.name.toLowerCase().includes(searchRestaurant.toLowerCase())
+    );
   //search restaurant by name end
   return (
-    <>
-    <h2>Restaurant Reservation</h2>
+    <div className={RestaurantsStyle.container}>
+      <h2>Restaurant Reservation</h2>
       <input
         onChange={handleSearchRestaurant}
         className={RestaurantsStyle.searchInput}
@@ -44,7 +51,7 @@ function Restaurants() {
             <Card key={restaurant.id} restaurant={restaurant} />
           ))}
       </div>
-    </>
+    </div>
   );
 }
 

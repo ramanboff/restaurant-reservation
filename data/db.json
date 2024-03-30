@@ -2,64 +2,242 @@
   "restaurants": [
     {
       "id": 1,
+      "slug": "The_Grill",
       "name": "The Grill",
-      "location": "Location 1",
-      "photo":"https://mir-s3-cdn-cf.behance.net/project_modules/fs/4293d8110142211.5fe4b63868448.jpg"
+      "photo": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/4293d8110142211.5fe4b63868448.jpg",
+      "description": "The_Grill Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.",
+      "reservations": [
+        {
+          "id": 1,
+          "clock": "10:00",
+          "date": "Wed Jan 31 2024"
+        },
+        {
+          "id": "5bce2fc7-ba35-4e90-ba8d-b6ad91deda83",
+          "clock": "10:00",
+          "date": "Sat Mar 02 2024",
+          "guests": "3"
+        },
+        {
+          "id": "f199e3da-61c3-468c-99b0-c74b24f586c5",
+          "clock": "10:00",
+          "date": "Sat Mar 30 2024",
+          "guests": "1"
+        },
+        {
+          "id": "44eb9272-9af8-48fe-bee8-4badfe62de4a",
+          "clock": "02:01",
+          "date": "Sat Mar 30 2024",
+          "guests": "1"
+        },
+        {
+          "id": "ebf058f3-a9f9-4fdb-bedd-3e2ae544eeb7",
+          "clock": "02:01",
+          "date": "Sat Mar 02 2024",
+          "guests": "1"
+        },
+        {
+          "id": "1b76b634-431b-4134-8a74-e971c8a65ffd",
+          "clock": "10:00",
+          "date": "Sun Mar 31 2024",
+          "guests": "1"
+        }
+      ]
     },
     {
       "id": 2,
+      "slug": "Burgitos",
       "name": "Burgitos",
-      "location": "Location 2",
-      "photo":"https://penji.co/wp-content/uploads/2020/10/Dave-BURGITOS.jpg"
+      "photo": "https://penji.co/wp-content/uploads/2020/10/Dave-BURGITOS.jpg",
+      "description": "Burgitos Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.",
+      "reservations": [
+        {
+          "id": 2,
+          "clock": "10:00",
+          "date": "Wed Jan 31 2024"
+        },
+        {
+          "id": "56058a5d-46fa-41bc-9160-e130ef0d48ce",
+          "clock": "10:00",
+          "date": "Sat Mar 16 2024",
+          "guests": "1"
+        },
+        {
+          "id": "4c7d967a-9d5f-4df0-b142-ee9ba3fb6dae",
+          "clock": "10:00",
+          "date": "Sun Mar 31 2024",
+          "guests": "1"
+        },
+        {
+          "id": "935c836f-33e0-48fe-83ac-4fca72755f1d",
+          "clock": "11:00",
+          "date": "Sun Mar 31 2024",
+          "guests": "1"
+        },
+        {
+          "id": "c70dca95-ffd5-4b32-8e17-5c10656d1f2c",
+          "clock": "00:00",
+          "date": "Sun Mar 31 2024",
+          "guests": "5"
+        },
+        {
+          "id": "455e4bd6-6650-4c63-875f-0409aa48e60b",
+          "clock": "00:00",
+          "date": "Mon Jul 01 2024",
+          "guests": "1"
+        }
+      ]
     },
     {
       "id": 3,
+      "slug": "Chuyax",
       "name": "Chuyax",
-      "location": "Location 3",
-      "photo":"https://penji.co/wp-content/uploads/2020/10/Dave-CHUYAX.jpg"
+      "photo": "https://penji.co/wp-content/uploads/2020/10/Dave-CHUYAX.jpg",
+      "description": "Chuyax Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.",
+      "reservations": [
+        {
+          "id": "f5185ef9-039d-4730-86d3-ee65390b46ad",
+          "clock": "10:00",
+          "date": "Sat Mar 30 2024",
+          "guests": "1"
+        },
+        {
+          "id": "fa5d0194-f543-49e7-9156-2b51df1775c6",
+          "clock": "03:32",
+          "date": "Sat Mar 30 2024",
+          "guests": "32"
+        }
+      ]
     },
     {
       "id": 4,
+      "slug": "NoodleBar",
       "name": "NoodleBar",
-      "location": "Location 3",
-      "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCzbiF5LnBjf5tVrk22ro2cl1U-zhwKlSVLQ&usqp=CAU"
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCzbiF5LnBjf5tVrk22ro2cl1U-zhwKlSVLQ&usqp=CAU",
+      "description": "NoodleBar Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.",
+      "reservations": [
+        {
+          "id": "8397af79-5ba8-4fb1-a238-d673d80989a2",
+          "clock": "10:00",
+          "date": "Sat Mar 30 2024"
+        },
+        {
+          "id": "4c553a11-fda7-4bd4-95cc-e03b1199c630",
+          "clock": "11:00",
+          "date": "Sat Mar 30 2024"
+        },
+        {
+          "id": "660747a8-b7d6-43a7-9f56-598934208cb9",
+          "clock": "11:00",
+          "date": "Sun Mar 10 2024"
+        },
+        {
+          "id": "6c0602e7-5404-45b7-bf8c-bf440098944d",
+          "clock": "00:00",
+          "date": "Sun Mar 10 2024"
+        },
+        {
+          "id": "aaafd515-edc7-46dd-b4c9-36c769f0bec8",
+          "clock": "12:00",
+          "date": "Sun Mar 10 2024"
+        }
+      ]
     },
     {
       "id": 5,
+      "slug": "Sushi_Today",
       "name": "Sushi Today",
-      "location": "Location 3",
-      "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ50WLBHPAxr0cdnABsg-dvi5DFedCVXIGj4Q&usqp=CAU"
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ50WLBHPAxr0cdnABsg-dvi5DFedCVXIGj4Q&usqp=CAU",
+      "description": "Sushi_Today Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.",
+      "reservations": [
+        {
+          "id": 5,
+          "clock": "10:00",
+          "date": "Wed Jan 31 2024"
+        },
+        {
+          "id": "22143383-238a-4a02-9340-c360725dfc8f",
+          "clock": "10:00",
+          "date": "Sun Mar 31 2024",
+          "guests": "1"
+        }
+      ]
     },
     {
       "id": 6,
+      "slug": "Borcelle",
       "name": "Borcelle",
-      "location": "Location 3",
-      "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT0Jrri-E7rECBaaDwM6cNdmSUjcbyI5cElQ&usqp=CAU"
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT0Jrri-E7rECBaaDwM6cNdmSUjcbyI5cElQ&usqp=CAU",
+      "description": "Borcelle Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.",
+      "reservations": [
+        {
+          "id": 6,
+          "clock": "10:00",
+          "date": "Wed Jan 31 2024"
+        }
+      ]
     },
     {
       "id": 7,
+      "slug": "Burger_King",
       "name": "Burger King",
-      "location": "Location 3",
-      "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSEP5ekbzhys1P9Eccr73sx_XgE_fAL21yfA&usqp=CAU"
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSEP5ekbzhys1P9Eccr73sx_XgE_fAL21yfA&usqp=CAU",
+      "description": "Burger_King Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.",
+      "reservations": [
+        {
+          "id": 7,
+          "clock": "10:00",
+          "date": "Wed Jan 31 2024"
+        }
+      ]
     },
     {
       "id": 8,
-      "name": "Borcelle",
-      "location": "Location 3",
-      "photo":"https://marketplace.canva.com/EAFyXLRB7G4/1/0/1600w/canva-yellow-white-emblem-restaurant-logo-ZFF3o_o-wfs.jpg"
+      "slug": "KFC",
+      "name": "KFC",
+      "photo": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1200px-KFC_logo.svg.png",
+      "description": "KFC Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.",
+      "reservations": [
+        {
+          "id": 8,
+          "clock": "10:00",
+          "date": "Wed Jan 31 2024"
+        }
+      ]
     },
     {
       "id": 9,
+      "slug": "Vanpanada",
       "name": "Vanpanada",
-      "location": "Location 3",
-      "photo":"https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/10/1d712e10-525a-4cc2-84f2-36e66336c0d0-e1571115090968.png?auto=format&q=60&fit=max&w=930"
+      "photo": "https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/10/1d712e10-525a-4cc2-84f2-36e66336c0d0-e1571115090968.png?auto=format&q=60&fit=max&w=930",
+      "description": "Vanpanada Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.",
+      "reservations": [
+        {
+          "id": 9,
+          "clock": "10:00",
+          "date": "Wed Jan 31 2024"
+        }
+      ]
     },
     {
       "id": 10,
+      "slug": "Buttermilk",
       "name": "Buttermilk",
-      "location": "Location 3",
-      "photo":"https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/10/attachment_40533723-e1571112100668.png?auto=format&q=60&fit=max&w=930"
+      "photo": "https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/10/attachment_40533723-e1571112100668.png?auto=format&q=60&fit=max&w=930",
+      "description": "Buttermilk Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam doloribus natus sit fugit voluptatibus ipsum quo veritatis, consequuntur delectus. Quas odit rem necessitatibus aperiam labore maxime aspernatur dicta explicabo.",
+      "reservations": [
+        {
+          "id": 10,
+          "clock": "10:00",
+          "date": "Wed Jan 31 2024"
+        },
+        {
+          "id": "e8bf8905-435f-4481-929e-5e241939b9b9",
+          "clock": "10:00",
+          "date": "Sat Mar 30 2024",
+          "guests": "2"
+        }
+      ]
     }
   ]
 }
-

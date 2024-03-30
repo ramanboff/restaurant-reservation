@@ -1,0 +1,44 @@
+.detailsContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.imageContainer {
+  width: 100%;
+}
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fullInfo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+.reservBtn {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #464444;
+  width: fit-content;
+}
+.reservBtn:hover {
+  background-color: rgb(120, 109, 109) 242;
+}
+.description {
+  text-align: justify;
+}
+
+.backBtn {
+  float: left;
+  text-align: start;
+  cursor: pointer;
+
+  color: white;
+  font-size: 50px;
+}
