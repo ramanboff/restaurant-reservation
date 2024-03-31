@@ -7,8 +7,7 @@ import RestaurantsStyle from "./Restaurants.module.css";
 function Restaurants() {
   // states
   const [searchRestaurant, setSearchRestaurant] = useState("");
-  const restaurants = useRestaurants((state) => state.allRestaurants);
-  const setRestaurants = useRestaurants((state) => state.updateRestaurants);
+  const { restaurants, setRestaurants } = useRestaurants((state) => state);
   const url = import.meta.env.VITE_API_URL;
 
   //data fetching
@@ -37,7 +36,7 @@ function Restaurants() {
     );
   //search restaurant by name end
   return (
-    <div className={RestaurantsStyle.container}>
+    <div className={`${RestaurantsStyle.detailsContainer} container`}>
       <h2>Restaurant Reservation</h2>
       <input
         onChange={handleSearchRestaurant}

@@ -8,14 +8,45 @@
 
 .searchInput {
   padding: 10px 20px;
-
-  display: flex;
+display: flex;
   margin: 30px auto;
   outline: none;
   text-align: center;
   font-size: 18px;
   color: grey;
+  /* background-color: red; */
 }
 .searchInput::placeholder{
   font-size: 18px;
 }
+
+ @media(max-width:1200px){
+
+  }
+  @media(max-width:992px){
+ 
+ 
+}
+  @media(max-width:768px){
+   .container{
+    max-width: 540px !important;
+    
+   }
+   .detailsContainer{
+    display: block;
+    
+   }
+  }
+  @media(max-width:576px){
+   .container{
+    max-width: 90% !important;
+   }
+   .searchInput {
+    width: 100%;
+    
+  }
+  .cardsWrapper {
+   gap: 40px;
+  
+  }
+  }

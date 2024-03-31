@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
 import cardStyle from "./Card.module.css";
-
 import * as React from "react";
-// import Button from '@mui/joy/Button';
-
 import Button from "@mui/joy/Button";
 
 function Card({ restaurant }) {
@@ -18,7 +15,7 @@ function Card({ restaurant }) {
           to={`/restaurants/${restaurant.id}`}
           className={cardStyle.bookingBtn}
         >
-          <Button type="submit" size="sm">show more</Button>
+          <Button type="submit"   size="sm">show more</Button>
           
         </Link>
       </div>

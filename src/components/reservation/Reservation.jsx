@@ -8,25 +8,36 @@ import "react-calendar/dist/Calendar.css";
 import DatePicker from "react-date-picker";
 import TimePicker from "react-time-picker";
 import "react-datetime-picker/dist/DateTimePicker.css";
-import detailsStyle from "./Reservation.module.css"
-
+import detailsStyle from "./Reservation.module.css";
 import * as React from "react";
-
-
 import Button from "@mui/joy/Button";
 
+import Input from "@mui/joy/Input";
+import BasicModal from "../BasicModal";
+import { Form } from "react-router-dom";
+
 function Reservation({ restaurantId }) {
-  const [date, setDate] = useState(new Date());
-  const [time, setTime] = useState("10:00");
-  const [guests, setGuests] = useState(0);
-  const restaurants = useRestaurants((state) => state.allRestaurants);
-  // const {allRestaurants,updateRestaurants} = useRestaurants((state) => state)
-  const setRestaurants = useRestaurants((state) => state.updateRestaurants);
+  const {
+    restaurants,
+    setRestaurants,
+    date,
+    time,
+    guests,
+    setGuests,
+    setTime,
+    setDate,
+  } = useRestaurants((state) => state);
+
+  //for modal Closing
+  const setModalState = useRestaurants((state) => state.setModalState);
+
   const url = import.meta.env.VITE_API_URL;
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const showSuccessAlert = () => {
     Swal.fire({
-      text: "Rezervasiya tamamlandı!",
+      text: "Reservation confirmed!",
       icon: "success",
     });
   };
@@ -34,7 +45,7 @@ function Reservation({ restaurantId }) {
   const showErrorAlert = () => {
     Swal.fire({
       icon: "error",
-      text: "Qeyd etdiyiniz vaxt artıq rezervasiya edilib!",
+      text: "Sorry, we don't have an empty table at the time you mentioned!",
     });
   };
 
@@ -56,59 +67,38 @@ function Reservation({ restaurantId }) {
       guests,
     };
 
-    const { reservations } = restaurants.find((res) => res.id == restaurantId);
+    setModalState(false);
 
+    const { reservations } = restaurants.find((res) => res.id == restaurantId);
     const isHaveReservation = reservations.some(({ clock, date }) => {
       return clock === obj.clock && date === obj.date;
     });
 
     if (isHaveReservation) {
       showErrorAlert();
-    } else {
-      if (guests < 1) {
-        alert("qonaq sayi 1den az ola bilmeez");
-      } else {
-        axios
-          .patch(url + restaurantId, {
-            reservations: [...reservations, obj],
-          })
-          .then(function (response) {
-            if (response.statusText === "OK") {
-              showSuccessAlert();
-              getData();
-            }
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-      }
+    } else if (+guests > 0) {
+      axios
+        .patch(url + restaurantId, {
+          reservations: [...reservations, obj],
+        })
+        .then(function (response) {
+          if (response.statusText === "OK") {
+            showSuccessAlert();
+            getData();
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     }
   };
 
   return (
-    <div className={detailsStyle.formWrapper}>
-      <form className={detailsStyle.form} onSubmit={handleSubmit}>
-        <div>
-          <TimePicker className={detailsStyle.timePicker} onChange={setTime} value={time} />
-        </div>
-        <div>
-          <DatePicker
-            className={detailsStyle.datePicker}
-            onChange={setDate}
-            value={date}
-          />
-        </div>
-
-        <input
-          className={detailsStyle.guest}
-          min={1}
-          type="number"
-          value={guests}
-          onChange={(e) => setGuests(e.target.value)}
-        />
-        <Button type="submit">make a reservation</Button>
-      </form>
-    </div>
+    <BasicModal
+      detailsStyle={detailsStyle}
+      handleSubmit={handleSubmit}
+      Input={Input}
+    />
   );
 }
 

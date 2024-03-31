@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   /* color: rgba(255, 255, 255, 0.87); */
-  /* background-color: #242424; */
+  background-color: #242424;
 }
 *{
   padding: 0;
@@ -11,27 +11,35 @@
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+}
+.blur-background {
+  filter: blur(5px); /* Adjust the blur amount as needed */
+  pointer-events: none; /* Prevent interaction with blurred content */
 }
 @media(max-width:1400px){
   .container{
    max-width: 1140px !important;
+   /* background-color: red; */
   }
  }
  @media(max-width:1200px){
  .container{
    max-width: 960px !important;
+   /* background-color: blue; */
   }
   }
   @media(max-width:992px){
    .container{
     max-width: 720px !important;
+    /* background-color: orange; */
    }
   }
   @media(max-width:768px){
    .container{
     max-width: 540px !important;
+    
    }
    .detailsContainer{
     display: block;
