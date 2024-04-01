@@ -1,23 +1,56 @@
+
 .cardsWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 30px;
 
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px 40px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+ 
+  backdrop-filter: blur(8px);
+ box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 20px;
+  
+}
+.logo{
+  text-decoration: none;
+  color: white;
 }
 
 .searchInput {
+  position: relative;
+  left: -48px;
   padding: 10px 20px;
 display: flex;
-  margin: 30px auto;
+  margin: 0 auto ;
   outline: none;
   text-align: center;
   font-size: 18px;
   color: grey;
-  /* background-color: red; */
+ 
 }
 .searchInput::placeholder{
   font-size: 18px;
+}
+.restaurantsContainer h1{
+  text-align: start;
+  font-size: 30px;
+  cursor: pointer;
+  background:rgb(47, 47, 47);
+  width: fit-content;
+  border-radius: 10px;
+  padding: 5px 10px;
+ 
 }
 
  @media(max-width:1200px){
@@ -48,5 +81,15 @@ display: flex;
   .cardsWrapper {
    gap: 40px;
   
+  }
+  .logo{
+    visibility: hidden;
+  }
+  .header{
+    display: flex;
+    justify-content: center;
+    /* padding: 20px; */
+    width: 100%;
+ 
   }
   }

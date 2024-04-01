@@ -36,5 +36,8 @@
 }
 .makeReservationBtn{
 width: fit-content;
+position: sticky;
+
+
 
 }

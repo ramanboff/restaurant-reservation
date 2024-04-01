@@ -19,7 +19,6 @@ function RestaurantsDetails() {
   const { restaurants, setRestaurants } = useRestaurants((state) => state);
   const [currentRestaurant, setCurrentRestaurant] = useState({});
 
-  
   const getData = async () => {
     try {
       const { data } = await axios(url);
@@ -39,23 +38,33 @@ function RestaurantsDetails() {
   }, [restaurants]);
 
   return (
-    <div className="container">
-      <Link className={detailsStyle.backBtn} to={"/"}>
-        <IoArrowBackCircle  />
+    <>
+      <Link to="/" className={detailsStyle.logo}>
+        <h1>RR/</h1>
+        <h2>Restaurant Reservation</h2>
       </Link>
-      <div className={detailsStyle.detailsContainer}>
-        <div className={detailsStyle.fullInfo}>
-          <div className={detailsStyle.imageContainer}>
-            <img src={currentRestaurant?.photo} alt={currentRestaurant?.name} />
-          </div>
-          <p className={detailsStyle.description}>
-            {currentRestaurant?.description}
-          </p>
-        </div>
 
-        <Reservation restaurantId={id} />
+      <div className="container">
+        <Link className={detailsStyle.backBtn} to={"/"}>
+          <IoArrowBackCircle />
+        </Link>
+        <div className={detailsStyle.detailsContainer}>
+          <div className={detailsStyle.fullInfo}>
+            <div className={detailsStyle.imageContainer}>
+              <img
+                src={currentRestaurant?.photo}
+                alt={currentRestaurant?.name}
+              />
+            </div>
+            <p className={detailsStyle.description}>
+              {currentRestaurant?.description}
+            </p>
+          </div>
+
+          <Reservation restaurantId={id} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 .card {
-  /* width: 180px; */
   width: calc(20% - 8px);
+ 
   border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
@@ -17,6 +17,7 @@
   padding: 5px 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
   height: 70px;
   color: black;
@@ -26,6 +27,7 @@
   font-weight: 900;
   color: #242424;
 }
+
 
 .imageContainer {
   overflow: hidden;
@@ -45,18 +47,18 @@
 }
 @media (max-width: 1200px) {
   .card {
-    width: calc(25% - 9px);
+    width: calc(25% - 8px);
   }
 }
 
 @media (max-width: 992px) {
   .card {
-    width: calc(33.3% - 9px);
+    width: calc(33.3% - 7px);
   }
 }
 @media (max-width: 768px) {
   .card {
-    width: calc(50% - 9px);
+    width: calc(50% - 5px);
   }
   .detailsContainer {
     display: block;

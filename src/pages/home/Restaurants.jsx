@@ -3,6 +3,7 @@ import { useRestaurants } from "../../store";
 import Card from "../../components/card/Card";
 import React, { useEffect, useState } from "react";
 import RestaurantsStyle from "./Restaurants.module.css";
+import { Link } from "react-router-dom";
 
 function Restaurants() {
   // states
@@ -36,14 +37,23 @@ function Restaurants() {
     );
   //search restaurant by name end
   return (
-    <div className={`${RestaurantsStyle.detailsContainer} container`}>
-      <h2>Restaurant Reservation</h2>
-      <input
-        onChange={handleSearchRestaurant}
-        className={RestaurantsStyle.searchInput}
-        type="text"
-        placeholder="search restaurant"
-      />
+    <>
+  
+  <div className={RestaurantsStyle.header}>
+    <Link to="/" className={RestaurantsStyle.logo}>
+    <h1>RR/</h1>
+    </Link>
+     <input
+       onChange={handleSearchRestaurant}
+       className={RestaurantsStyle.searchInput}
+       type="text"
+       placeholder="search restaurant"
+     />
+     
+    </div>
+
+    <div className={`${RestaurantsStyle.restaurantsContainer} container`}>
+     
       <div className={RestaurantsStyle.cardsWrapper}>
         {restaurants &&
           filteredRestaurants.map((restaurant) => (
@@ -51,6 +61,7 @@ function Restaurants() {
           ))}
       </div>
     </div>
+    </>
   );
 }
 
